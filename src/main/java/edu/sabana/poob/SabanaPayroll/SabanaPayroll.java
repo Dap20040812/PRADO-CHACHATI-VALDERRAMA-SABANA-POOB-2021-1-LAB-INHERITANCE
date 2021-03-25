@@ -46,7 +46,10 @@ public class SabanaPayroll {
 
         for (Department d : this.departments)
         {
-            System.out.println(d.printEmployes());
+            for(int i = 0;i< d.printEmployes().size();i++)
+            {
+                System.out.println("\t"+d.printEmployes().get(i));
+            }
         }
 
     }
