@@ -21,9 +21,9 @@ public class SabanaNominaTest {
 
         s = new SabanaPayroll();
         d = new Department("D");
-        d1 = new Department("D1");
-        s.addDeparment(d);
-        s.addDeparment(d1);
+        d1 = new Department( "D1");
+        s.addDepartment(d);
+        s.addDepartment(d1);
         e1 = new EmployeeBySalary("E","R",d,120);
         e2 = new EmployeeByHours("R","T",d1,5);
         e3 = new EmployeeByCommission("T","Y",d,6);
@@ -52,7 +52,7 @@ public class SabanaNominaTest {
         assertEquals(148.9,s.calculateUniversitySalaries());
 
     }
-    
+
     @Test
     public void ShouldPrintEmployees(){
 

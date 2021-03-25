@@ -43,7 +43,7 @@ public class Department{
         return EmployeeSalary;
     }
 
-    public ArrayList<String> printEmployes() {
+    public ArrayList<String> printEmployees() {
 
         ArrayList<String> employees = new ArrayList<>();
         for (Employee e: this.employees)
