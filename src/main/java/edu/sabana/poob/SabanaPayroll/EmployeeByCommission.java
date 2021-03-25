@@ -1,8 +1,8 @@
-package edu.sabana.poob.SabanaNominaTest;
+package edu.sabana.poob.SabanaPayroll;
 
-public class EmployeeByCommission extends Employee{
+public class EmployeeByCommission extends Employee {
 
-    private static final double VALOR_COMISION = 0;
+    private static final double VALOR_COMISION = 3.5;
     private double productos_vendidos;
 
     public EmployeeByCommission(String name, String lastname, Department department, double productos_vendidos) {

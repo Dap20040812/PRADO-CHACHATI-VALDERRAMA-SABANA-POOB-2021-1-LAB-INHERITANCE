@@ -1,4 +1,6 @@
-package edu.sabana.poob.SabanaNominaTest;
+package edu.sabana.poob.SabanaPayroll;
+
+import edu.sabana.poob.SabanaPayroll.Department;
 
 import java.util.UUID;
 
@@ -27,5 +29,9 @@ public class Employee {
 
     public String getLastname() {
         return lastname;
+    }
+
+    public UUID getId() {
+        return id;
     }
 }

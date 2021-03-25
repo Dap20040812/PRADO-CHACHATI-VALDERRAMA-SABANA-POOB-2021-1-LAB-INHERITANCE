@@ -1,8 +1,8 @@
-package edu.sabana.poob.SabanaNominaTest;
+package edu.sabana.poob.SabanaPayroll;
 
-public class EmployeeByHours extends Employee{
+public class EmployeeByHours extends Employee {
 
-    public final static int VALOR_HORA = 0;
+    public final static double VALOR_HORA = 3.5;
     private double horas_trabajadas;
 
     public EmployeeByHours(String name, String lastname, Department department, double horas_trabajadas) {

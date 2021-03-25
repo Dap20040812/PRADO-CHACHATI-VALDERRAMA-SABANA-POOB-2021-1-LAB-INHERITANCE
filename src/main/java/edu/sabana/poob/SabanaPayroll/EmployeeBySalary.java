@@ -1,4 +1,4 @@
-package edu.sabana.poob.SabanaNominaTest;
+package edu.sabana.poob.SabanaPayroll;
 
 public class EmployeeBySalary extends Employee {
 
