@@ -1,5 +1,7 @@
 package edu.sabana.poob.Shapes;
 
+import java.text.DecimalFormat;
+
 public class Rectangle extends Shape {
 
     public double width = 1;
@@ -45,13 +47,14 @@ public class Rectangle extends Shape {
     @Override
     public String toString() {
 
+        DecimalFormat f = new DecimalFormat("#.00");
         if((int)getDiagonal()== getDiagonal())
         {
             return (super.toString()+" and diagonal "+ (int)getDiagonal());
         }
         else
         {
-            return (super.toString()+" and diagonal "+ getDiagonal());
+            return (super.toString()+" and diagonal "+ f.format(getDiagonal()));
         }
     }
 

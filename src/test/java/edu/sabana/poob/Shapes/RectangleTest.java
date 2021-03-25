@@ -12,6 +12,12 @@ public class RectangleTest {
     private static Rectangle c3;
     private static Rectangle c4;
     private static Rectangle c5;
+    private static Square c6;
+    private static Square c7;
+    private static Square c8;
+    private static Square c9;
+
+
 
     @BeforeAll
     public static void setUp() {
@@ -20,6 +26,10 @@ public class RectangleTest {
         c3 = new Rectangle("red");
         c4 = new Rectangle("red",40,56.7);
         c5 = new Rectangle();
+        c6 = new Square(20);
+        c7 = new Square("red");
+        c8 = new Square("red",40.4);
+        c9 = new Square();
     }
 
     @Test
@@ -29,6 +39,10 @@ public class RectangleTest {
         assertEquals(1, (int) c3.getArea());
         assertEquals(2268, (int) c4.getArea());
         assertEquals(1, (int) c5.getArea());
+        assertEquals(400, (int) c6.getArea());
+        assertEquals(1, (int) c7.getArea());
+        assertEquals(1632, (int) c8.getArea());
+        assertEquals(1, (int) c9.getArea());
     }
 
     @Test
@@ -39,6 +53,10 @@ public class RectangleTest {
         assertEquals(4, (int) c3.getPerimeter());
         assertEquals(193, (int) c4.getPerimeter());
         assertEquals(4, (int) c5.getPerimeter());
+        assertEquals(80, (int) c6.getPerimeter());
+        assertEquals(4, (int) c7.getPerimeter());
+        assertEquals(161, (int) c8.getPerimeter());
+        assertEquals(4, (int) c9 .getPerimeter());
 
     }
 
@@ -50,17 +68,29 @@ public class RectangleTest {
         assertEquals(1, (int) c3.getDiagonal());
         assertEquals(69, (int) c4.getDiagonal());
         assertEquals(1, (int) c5.getDiagonal());
+        assertEquals(28, (int) c6.getDiagonal());
+        assertEquals(1, (int) c7.getDiagonal());
+        assertEquals(57, (int) c8.getDiagonal());
+        assertEquals(1, (int) c9.getDiagonal());
 
     }
 
     @Test
      public void shouldPrintCircle() {
 
-        assertEquals("This is a Rectangle with color NONE and diagonal 44.72135955", c1.toString());
-        assertEquals("This is a Rectangle with color NONE and diagonal 54.64200673", c2.toString());
-        assertEquals("This is a Rectangle with color red and diagonal 1.414213562", c3.toString());
-        assertEquals("This is a Rectangle with color NONE and diagonal 69.38940841", c4.toString());
-        assertEquals("This is a Rectangle with color red and diagonal 1.414213562", c5.toString());
+        assertEquals("This is a Rectangle with color NONE and diagonal 44,72", c1.toString());
+        assertEquals("This is a Rectangle with color NONE and diagonal 54,64", c2.toString());
+        assertEquals("This is a Rectangle with color red and diagonal 1,41", c3.toString());
+        assertEquals("This is a Rectangle with color red and diagonal 69,39", c4.toString());
+        assertEquals("This is a Rectangle with color NONE and diagonal 1,41", c5.toString());
+        assertEquals("This is a Square with color NONE and diagonal 28,28", c6.toString());
+        assertEquals("This is a Square with color red and diagonal 1,41", c7.toString());
+        assertEquals("This is a Square with color red and diagonal 57,13", c8.toString());
+        assertEquals("This is a Square with color NONE and diagonal 1,41", c9.toString());
+
+
+
+
     }
 
 }
