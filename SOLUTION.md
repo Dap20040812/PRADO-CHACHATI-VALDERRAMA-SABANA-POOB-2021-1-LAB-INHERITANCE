@@ -23,4 +23,4 @@
 
   ## Parte 3
 
- ![](img/shapes-class-diagram(1).svg)
+ ![](img/shapes-class-diagram-1.svg)
