@@ -1,4 +1,4 @@
-package edu.sabana.poob;
+package edu.sabana.poob.Shapes;
 
 public class Circle extends Shape {
 
@@ -47,7 +47,6 @@ public class Circle extends Shape {
         {
             return (super.toString()+" and radius "+ this.radius);
         }
-       /*return (super.toString()+" and radius "+ ( (int)this.radius== this.radius ? (int)this.radius : this.radius ));*/
     }
 
 }

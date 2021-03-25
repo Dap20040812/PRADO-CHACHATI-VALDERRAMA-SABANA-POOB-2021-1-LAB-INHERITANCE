@@ -1,6 +1,6 @@
-package edu.sabana.poob;
+package edu.sabana.poob.Shapes;
 
-public class Triangle extends Shape{
+public class Triangle extends Shape {
 
     private double side1 = 1;
     private double side2 = 1;
@@ -28,28 +28,41 @@ public class Triangle extends Shape{
 
     public boolean isIsoceles()
     {
-        return true;
+        boolean is = false;
+        if((side1 == side2 && side2 != side3) || (side1 == side3 && side3 != side2) || (side2 == side3 && side3 != side1))
+        {
+            is = true;
+        }
+        return is;
     }
 
     public boolean isEquilatera()
     {
-        return true;
+        boolean is = false;
+        if(side1 == side2 && side2 == side3)
+        {
+            is = true;
+        }
+        return is;
     }
     @Override
     public double getArea() {
-        double A;
-        return A;
+        double p = getPerimeter()/2;
+        double a= Math.sqrt(p*(p-side1)*(p-side2)*(p-side3));
+        return a;
+
     }
     @Override
     public double getPerimeter() {
+        double b = side1+side2+side3;
+        return b;
 
-        double P;
-        return P;
+
     }
 
     @Override
     public String toString() {
-        return (super.toString() + (isEquilatera() == true ? " es un triangulo equilatero" :" es un triangulo equilatero" ));
+        return (super.toString() + (isEquilatera() ? " and is an equilateral triangle" : isIsoceles() ? " and is an isosceles triangle" : " and is an scalene triangle" ));
     }
 
 }

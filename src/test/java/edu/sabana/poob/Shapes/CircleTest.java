@@ -1,4 +1,4 @@
-package edu.sabana.poob;
+package edu.sabana.poob.Shapes;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

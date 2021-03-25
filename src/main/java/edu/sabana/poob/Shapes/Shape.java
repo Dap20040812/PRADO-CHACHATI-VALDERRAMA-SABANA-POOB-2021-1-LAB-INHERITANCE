@@ -1,4 +1,4 @@
-package edu.sabana.poob;
+package edu.sabana.poob.Shapes;
 
 public class Shape {
 
