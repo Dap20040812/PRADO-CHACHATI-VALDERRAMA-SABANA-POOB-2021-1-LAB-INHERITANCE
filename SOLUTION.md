@@ -40,9 +40,20 @@
   ## Diagramas de secuencia
 
   ### calculateEmployeeSalary
+
+  ![](img/calculateEmployeeSalary.svg)
+
   ### calculateDepartmentSalaries
+
+  ![](img/calculateDepartmentSalaries.svg)
+
   ### printPayroll
+
+  ![](img/printPayroll.svg)
+
   ### calculateUniversitySalaries
+
+  ![](img/calculateUniversitySalaries.svg)
 
   ## Documentación
   ## Evidencia pruebas
