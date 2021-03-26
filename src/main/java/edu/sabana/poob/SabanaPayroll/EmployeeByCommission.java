@@ -1,4 +1,11 @@
 package edu.sabana.poob.SabanaPayroll;
+/**
+ * Represents a Employee. <br><br>
+ * Invariants:
+ * 1. VALOR_COMISION = 3.5
+ * 2. productos_vendidos <=0 . <br><br>
+ *
+ */
 
 public class EmployeeByCommission extends Employee {
 
@@ -10,12 +17,19 @@ public class EmployeeByCommission extends Employee {
         this.productos_vendidos = productos_vendidos;
     }
 
+    /**
+     * Este metodo soreescribe el metodo calculateSalary y agrega el de empleado por comision.
+     * @return double Salario del empleado
+     */
+
     @Override
     public double calculateSalary(){
         return this.productos_vendidos*EmployeeByCommission.VALOR_COMISION;
     }
-
+    /**
+     * Este metodo soreescribe el metodo calculateSalary y agrega el de empleado por comision.
+     * @return double Salario del empleado
+     */
     @Override
-
     public String toString() {return super.toString()+" payment by commission";}
 }

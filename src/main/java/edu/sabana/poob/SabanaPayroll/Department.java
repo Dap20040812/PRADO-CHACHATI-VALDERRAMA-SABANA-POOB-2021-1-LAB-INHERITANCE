@@ -20,7 +20,10 @@ public class Department{
     public UUID getId() {
         return id;
     }
-
+    /**
+     * Este metodo calcula la suma de los salarios de los empleados.
+     * @return double el salario del departamento
+     */
     public double calculateDepartmentSalaries() {
 
         double Totalsalary = 0;
@@ -31,7 +34,11 @@ public class Department{
 
         return Totalsalary;
     }
-
+    /**
+     * Este metodo busca a un empleado especifico.
+     * @param idEmployee
+     * @return double el salario de un empleado
+     */
     public double findSalaryEmployee(UUID idEmployee) {
         double EmployeeSalary=0;
         boolean isEmployee = false;
@@ -44,7 +51,10 @@ public class Department{
         }
         return EmployeeSalary;
     }
-
+    /**
+     * Este metodo guarda a los empleados de un departamento en un ArrayList.
+     * @return ArrayList</String>
+     */
     public ArrayList<String> printEmployees() {
 
         ArrayList<String> employees = new ArrayList<>();
@@ -55,7 +65,10 @@ public class Department{
 
         return employees;
     }
-
+    /**
+     * Este metodo agrega a un empleado a un departamento.
+     * @param employee
+     */
     public void addEmployee(Employee employee){
         employees.add(employee);
     }

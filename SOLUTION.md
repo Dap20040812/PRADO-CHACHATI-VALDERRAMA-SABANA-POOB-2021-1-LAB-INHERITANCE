@@ -94,8 +94,65 @@
   ![](img/calculateUniversitySalaries.svg)
 
   ## Documentación
+  ### SabanaPayroll
+  La clase SabanaPayroll representa la nomina de la universidad de la sabanapayroll
 
-  
+  * calculateDepartmentSalaries(UUID idDepartment): Este metod suma todos los salarios de todos los empleados de un deprtaento. - param idDepartment - return double Salarios de un departamento especifico
+
+  * calculateEmployeeSalary(UUID idEmployee): Este metodo calcula el salario de un empleado en especifico. - param idEmployee - return double salario de un empleado
+
+  * calculateUniversitySalaries(): Este metodo suma todos los salarios de todos los departamentos. - return double Salario de toda la universidad
+
+  * printPayroll(): Imprime la lista de todos los empeados en la nomina de la universidad.
+
+  * addDepartment(Department department): Añade un departamento a la lista de departamentos de la universidad. - param department
+
+  ### Department
+  La clase Department representa los departamentos de la Universidad
+
+  * calculateDepartmentSalaries():  Este metodo calcula la suma de los salarios de los empleados. - return double el salario del departamento
+
+  * findSalaryEmployee(UUID idEmployee): Este metodo busca a un empleado especifico. - param idEmployee - return double el salario de un empleado
+
+  * printEmployees(): Este metodo guarda a los empleados de un departamento en un ArrayList. - return ArrayList</String>
+
+  * addEmployee(Employee employee): Este metodo agrega a un empleado a un departamento. - param employee
+
+  ### Employee
+  La clase Employee representa a un empleado de la Universidad
+
+  * toString(): Este metodo imprime al empleado y sus caracteristicas. - return String las caracteristicas del empleado.o
+
+  ### EmployeeByCommission
+
+  La clase EmployeeByCommission representa al un empleado que cobra por comisión.
+
+  * calculateSalary(): Este metodo soreescribe el metodo calculateSalary y agrega el de empleado por comision. - return double Salario del empleado
+
+  * toString(): Este metodo soreescribe el metodo calculateSalary y agrega el de empleado por comision. - return double Salario del empleado
+
+  ### EmployeeByHours
+
+  La clase EmployeeByHours representa al un empleado que cobra por hora.
+
+  * calculateSalary(): Este metodo soreescribe el metodo calculateSalary y agrega el de empleado por hora. - return double Salario del empleado
+
+  * toString(): Este metodo soreescribe el metodo calculateSalary y agrega el de empleado por hora. - return double Salario del empleado
+
+  ### EmployeeSalary
+
+  La clase EmployeeSalary representa al un empleado que tiene un salrio.
+
+  * calculateSalary(): Este metodo soreescribe el metodo calculateSalary y agrega el de empleado por salario. - return double Salario del empleado
+
+  * toString(): Este metodo soreescribe el metodo calculateSalary y agrega el de empleado por salario. - return double Salario del empleado
+
+
+
+
+
+
+
   ## Evidencia pruebas
 
   ![](img/EVIP4.png)

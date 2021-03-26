@@ -1,4 +1,12 @@
 package edu.sabana.poob.SabanaPayroll;
+/**
+ * Represents a Employee. <br><br>
+ * Invariants:
+ * 1. HEALTH_DISCOUNT = 0.04
+ * 2. SOCIAL_EQUITY_DISCOUNT = 0.04.
+ * 3. salary>0 <br><br>
+ *
+ */
 
 public class EmployeeBySalary extends Employee {
 
@@ -10,12 +18,18 @@ public class EmployeeBySalary extends Employee {
         super(name, lastname, department);
         this.salary = salary;
     }
-
+    /**
+     * Este metodo soreescribe el metodo calculateSalary y agrega el de empleado por salario.
+     * @return double Salario del empleado
+     */
     @Override
     public double calculateSalary(){
         return this.salary*(1-(EmployeeBySalary.HEALTH_DISCOUNT+EmployeeBySalary.SOCIAL_EQUITY_DISCOUNT));
     }
-
+    /**
+     * Este metodo soreescribe el metodo calculateSalary y agrega el de empleado por salario.
+     * @return double Salario del empleado
+     */
     @Override
 
     public String toString() {return super.toString()+" payment by salary";}

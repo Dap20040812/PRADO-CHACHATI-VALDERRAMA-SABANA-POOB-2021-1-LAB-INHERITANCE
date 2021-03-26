@@ -20,6 +20,11 @@ public class Employee {
 
     public double calculateSalary(){return 0;}
 
+    /**
+     * Este metodo imprime al empleado y sus caracteristicas.
+     * @return String las caracteristicas del empleado.
+     */
+
     @Override
     public String toString() {
         return String.format("%s %s, department %s, salary %s", this.name, this.lastname, this.department.getName(), this.calculateSalary());
