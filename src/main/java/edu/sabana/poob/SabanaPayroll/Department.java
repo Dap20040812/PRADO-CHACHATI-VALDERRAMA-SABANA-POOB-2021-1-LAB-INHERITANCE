@@ -34,10 +34,12 @@ public class Department{
 
     public double findSalaryEmployee(UUID idEmployee) {
         double EmployeeSalary=0;
-        for(Employee e: this.employees){
-            if(e.getId()==idEmployee){
-                EmployeeSalary = e.calculateSalary();
-                break;
+        boolean isEmployee = false;
+
+        for(int i=0;i<employees.size() && !isEmployee; i++ ) {
+            if (employees.get(i).getId() == idEmployee) {
+                EmployeeSalary = employees.get(i).calculateSalary();
+                isEmployee = true;
             }
         }
         return EmployeeSalary;
