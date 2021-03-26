@@ -27,12 +27,28 @@ public class Rectangle extends Shape {
 
     public double getDiagonal()
     {
+        if(this.length < 0)
+        {
+            this.length=this.length*-1;
+        }
+        if(this.width < 0)
+        {
+            this.width=this.width*-1;
+        }
         return Math.sqrt(Math.pow(this.width,2)+Math.pow(this.length,2));
     }
 
     @Override
     public double getArea() {
         double A;
+        if(this.length < 0)
+        {
+            this.length=this.length*-1;
+        }
+        if(this.width < 0)
+        {
+            this.width=this.width*-1;
+        }
         A = this.width*this.length;
         return A;
     }
@@ -40,6 +56,14 @@ public class Rectangle extends Shape {
     public double getPerimeter() {
 
         double P;
+        if(this.length < 0)
+        {
+            this.length=this.length*-1;
+        }
+        if(this.width < 0)
+        {
+            this.width=this.width*-1;
+        }
         P = 2*width + 2*length;
         return P;
     }

@@ -16,6 +16,7 @@ public class RectangleTest {
     private static Square c7;
     private static Square c8;
     private static Square c9;
+    private static Rectangle c10;
 
 
 
@@ -30,6 +31,7 @@ public class RectangleTest {
         c7 = new Square("red");
         c8 = new Square("red",40.4);
         c9 = new Square();
+        c10= new Rectangle(-20,40);
     }
 
     @Test
@@ -43,6 +45,8 @@ public class RectangleTest {
         assertEquals(1, (int) c7.getArea());
         assertEquals(1632, (int) c8.getArea());
         assertEquals(1, (int) c9.getArea());
+        assertEquals(800, (int) c10.getArea());
+
     }
 
     @Test
@@ -57,6 +61,8 @@ public class RectangleTest {
         assertEquals(4, (int) c7.getPerimeter());
         assertEquals(161, (int) c8.getPerimeter());
         assertEquals(4, (int) c9 .getPerimeter());
+        assertEquals(120, (int) c10.getPerimeter());
+
 
     }
 
@@ -72,6 +78,8 @@ public class RectangleTest {
         assertEquals(1, (int) c7.getDiagonal());
         assertEquals(57, (int) c8.getDiagonal());
         assertEquals(1, (int) c9.getDiagonal());
+        assertEquals(44, (int) c10.getDiagonal());
+
 
     }
 

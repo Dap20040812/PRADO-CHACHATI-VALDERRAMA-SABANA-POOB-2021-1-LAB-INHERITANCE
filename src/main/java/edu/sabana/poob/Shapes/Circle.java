@@ -19,34 +19,48 @@ public class Circle extends Shape {
     }
 
     public double getDiameter() {
-        return 2*this.radius;
+        if(this.radius > 0) {
+            return 2 * this.radius;
+        }
+        return 0;
     }
-
     @Override
     public double getArea() {
-        double A;
-        A = PI*Math.pow(this.radius,2);
+        double A=0;
+        if(this.radius > 0)
+        {
+            A = PI*Math.pow(this.radius,2);
+        }
         return A;
     }
     @Override
     public double getPerimeter() {
 
-        double P;
-        P = 2*PI*this.radius;
+        double P=0;
+        if(this.radius > 0) {
+            P = 2 * PI * this.radius;
+        }
         return P;
     }
 
     @Override
     public String toString() {
 
-        if((int)this.radius==this.radius)
+        if(this.radius <= 0)
         {
-            return (super.toString()+" and radius "+ (int)this.radius);
+            return ("A circle with radius "+(int)this.radius+" doesn't exists");
         }
-        else
-        {
-            return (super.toString()+" and radius "+ this.radius);
+        else{
+            if((int)this.radius==this.radius)
+            {
+                return (super.toString()+" and radius "+ (int)this.radius);
+            }
+            else
+            {
+                return (super.toString()+" and radius "+ this.radius);
+            }
         }
+
     }
 
 }

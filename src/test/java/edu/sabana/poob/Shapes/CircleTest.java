@@ -11,6 +11,7 @@ public class CircleTest {
     private static Circle c2;
     private static Circle c3;
     private static Circle c4;
+    private static Circle c5;
 
     @BeforeAll
     public static void setUp() {
@@ -18,6 +19,7 @@ public class CircleTest {
         c2 = new Circle(14.5);
         c3 = new Circle("red", 23.5);
         c4 = new Circle();
+        c5 = new Circle(0);
     }
 
     @Test
@@ -29,12 +31,26 @@ public class CircleTest {
     }
 
     @Test
+    public void shouldNotCalculateArea() {
+
+        assertEquals(0, (int) c5.getArea());
+    }
+
+
+
+    @Test
     public void shouldCalculatePerimeter() {
 
         assertEquals(62, (int) c1.getPerimeter());
         assertEquals(91, (int) c2.getPerimeter());
         assertEquals(147, (int) c3.getPerimeter());
         assertEquals(6, (int) c4.getPerimeter());
+    }
+
+    @Test
+    public void shouldNotCalculatePerimeter() {
+
+        assertEquals(0, (int) c5.getPerimeter());
     }
 
     @Test
@@ -47,12 +63,19 @@ public class CircleTest {
     }
 
     @Test
+    public void shouldNotCalculateDiameter() {
+
+        assertEquals(0, (int) c5.getDiameter());
+    }
+
+    @Test
     public void shouldPrintCircle() {
 
         assertEquals("This is a Circle with color NONE and radius 10", c1.toString());
         assertEquals("This is a Circle with color NONE and radius 14.5", c2.toString());
         assertEquals("This is a Circle with color red and radius 23.5", c3.toString());
         assertEquals("This is a Circle with color NONE and radius 1", c4.toString());
+        assertEquals("A circle with radius 0 doesn't exists",c5.toString());
     }
 
 }

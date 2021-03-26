@@ -48,21 +48,36 @@ public class Triangle extends Shape {
     @Override
     public double getArea() {
         double p = getPerimeter()/2;
-        double a= Math.sqrt(p*(p-side1)*(p-side2)*(p-side3));
+        double a= 0;
+        if(side1+side2> side3 && side1-side2<side3 ) {
+            a = Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
+        }
         return a;
 
     }
     @Override
     public double getPerimeter() {
-        double b = side1+side2+side3;
+
+        double b =0;
+        if(side1+side2> side3 && side1-side2<side3 )
+        {
+            b = side1+side2+side3;
+        }
         return b;
-
-
     }
 
     @Override
     public String toString() {
-        return (super.toString() + (isEquilatera() ? " and is an equilateral triangle" : isIsoceles() ? " and is an isosceles triangle" : " and is an scalene triangle" ));
+        if(side1+side2> side3 && side1-side2<side3 )
+        {
+            return (super.toString() + (isEquilatera() ? " and is an equilateral triangle" : isIsoceles() ? " and is an isosceles triangle" : " and is an scalene triangle" ));
+
+        }
+        else
+        {
+            return "The triangle with the dimensions " +side1+" "+side2+" "+side3+" doesn't exist";
+
+        }
     }
 
 }

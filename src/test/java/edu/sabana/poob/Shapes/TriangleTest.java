@@ -11,6 +11,7 @@ public class TriangleTest {
     private static Triangle c3;
     private static Triangle c4;
     private static Triangle c5;
+    private static Triangle c6;
 
     @BeforeAll
     public static void setUp() {
@@ -19,6 +20,7 @@ public class TriangleTest {
         c3 = new Triangle("red");
         c4 = new Triangle("red",34,54,67);
         c5 = new Triangle();
+        c6 = new Triangle(24,17,100);
     }
 
     @Test
@@ -29,6 +31,11 @@ public class TriangleTest {
         assertEquals(912, (int) c4.getArea());
         assertEquals(0, (int) c5.getArea());
 
+    }
+    @Test
+    public void shouldNotCalculateArea() {
+
+        assertEquals(0, (int) c6.getArea());
     }
 
     @Test
@@ -42,6 +49,13 @@ public class TriangleTest {
 
     }
 
+    @Test
+    public void shouldNotCalculatePerimeter() {
+
+        assertEquals(0, (int) c6.getPerimeter());
+
+    }
+
    @Test
    public void shouldBeIsosceles(){
 
@@ -51,6 +65,7 @@ public class TriangleTest {
        assertFalse(c4.isIsoceles());
        assertFalse(c5.isIsoceles());
    }
+
     @Test
     public void shouldBeEquilateral(){
 
@@ -70,6 +85,8 @@ public class TriangleTest {
         assertEquals("This is a Triangle with color red and is an equilateral triangle", c3.toString());
         assertEquals("This is a Triangle with color red and is an scalene triangle", c4.toString());
         assertEquals("This is a Triangle with color NONE and is an equilateral triangle", c5.toString());
+        assertEquals("The triangle with the dimensions 24.0 17.0 100.0 doesn't exist", c6.toString());
+
 
     }
 
