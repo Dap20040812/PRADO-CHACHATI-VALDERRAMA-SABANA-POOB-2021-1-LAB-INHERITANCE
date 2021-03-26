@@ -25,6 +25,10 @@ public class Rectangle extends Shape {
         this.width = width;
     }
 
+    /**
+     * Calcula la diagonal de un rectangulo o cuadrado, dado de su ancho y largo definidos
+     * @return double La diagonas de un rectangulo o cuadrado
+     */
     public double getDiagonal()
     {
         if(this.length < 0)
@@ -37,7 +41,11 @@ public class Rectangle extends Shape {
         }
         return Math.sqrt(Math.pow(this.width,2)+Math.pow(this.length,2));
     }
-    
+
+    /**
+     * Calcula el area de un rectangulo o cuadrado, dado de su ancho y largo definidos
+     * @return double El area de un rectangulo o cuadrado
+     */
     @Override
     public double getArea() {
         double A;
@@ -52,6 +60,11 @@ public class Rectangle extends Shape {
         A = this.width*this.length;
         return A;
     }
+
+    /**
+     * Calcula el perimetro de un rectangulo o cuadrado, dado de su ancho y largo definidos
+     * @return double El Perimetro de un rectangulo o cuadrado
+     */
     @Override
     public double getPerimeter() {
 
@@ -68,6 +81,11 @@ public class Rectangle extends Shape {
         return P;
     }
 
+    /**
+     * Sobreescribe el metodo toString de la clase Shape agregando la diagonal de un triangulo o cuadrado
+     * @return  Las caracteristicas del rectangulo o cuadrado.
+     *
+     */
     @Override
     public String toString() {
 

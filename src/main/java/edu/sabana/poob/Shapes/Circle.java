@@ -1,12 +1,11 @@
+package edu.sabana.poob.Shapes;
 /**
- * Represents a Course. <br><br>
+ * Represents a Circle. <br><br>
  * Invariants:
- * 1. MAXIMUM_QUOTA > 0
- * 2. MAXIMUM_QUOTA >= number of registered students. <br><br>
+ * 1. PI = 3.14.....
+ * 2. radius > 0 <br><br>
  *
  */
-package edu.sabana.poob.Shapes;
-
 public class Circle extends Shape {
 
     private double radius;

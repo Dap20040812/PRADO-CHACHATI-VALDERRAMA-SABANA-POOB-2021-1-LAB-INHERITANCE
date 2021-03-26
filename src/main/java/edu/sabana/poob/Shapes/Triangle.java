@@ -26,6 +26,10 @@ public class Triangle extends Shape {
 
     }
 
+    /**
+     * Verifica que un triangulo se isosceles
+     * @return True si el triangulo es isosceles False si no es isosceles
+     */
     public boolean isIsoceles()
     {
         boolean is = false;
@@ -35,7 +39,10 @@ public class Triangle extends Shape {
         }
         return is;
     }
-
+    /**
+     * Verifica que un triangulo se equilatero
+     * @return True si el triangulo es equilatero False si no es equilatero
+     */
     public boolean isEquilatera()
     {
         boolean is = false;
@@ -45,6 +52,10 @@ public class Triangle extends Shape {
         }
         return is;
     }
+    /**
+     * Calcula el area de un triangulo de lados definidos
+     * @return double A = Area del circulo si el triangulo existe, si los lados del triangulo forman un triangulo que no existe devuelve 0.
+     */
     @Override
     public double getArea() {
         double p = getPerimeter()/2;
@@ -55,6 +66,10 @@ public class Triangle extends Shape {
         return a;
 
     }
+    /**
+     * Calcula el perimetro de un triangulo de lados definidos
+     * @return double P = Perimetro del circulo si el triangulo existe, si los lados del triangulo forman un triangulo que no existe devuelve 0.
+     */
     @Override
     public double getPerimeter() {
 
@@ -65,7 +80,13 @@ public class Triangle extends Shape {
         }
         return b;
     }
-
+    /**
+     * Sobreescribe el metodo toString de la clase Shape agregando el tipo de triangulo
+     *
+     * @return Si el triangulo existe devuelve las caracteristicas ,
+     * si el triangulo no existe regresa que el triangulo con la dimenciones dadas no existe
+     *
+     */
     @Override
     public String toString() {
         if(side1+side2> side3 && side1-side2<side3 )
