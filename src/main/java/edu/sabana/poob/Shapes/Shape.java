@@ -20,6 +20,10 @@ public class Shape {
         return 0;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return String.format("This is a %s with color %s"

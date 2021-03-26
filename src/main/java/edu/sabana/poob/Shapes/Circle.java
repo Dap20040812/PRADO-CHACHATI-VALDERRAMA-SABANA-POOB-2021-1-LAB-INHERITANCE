@@ -1,3 +1,10 @@
+/**
+ * Represents a Course. <br><br>
+ * Invariants:
+ * 1. MAXIMUM_QUOTA > 0
+ * 2. MAXIMUM_QUOTA >= number of registered students. <br><br>
+ *
+ */
 package edu.sabana.poob.Shapes;
 
 public class Circle extends Shape {
@@ -18,12 +25,21 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
+    /**
+     * Calcula el diametro de un ciruclo de un radio definido por radius
+     * @return double diametro del circulo
+     */
     public double getDiameter() {
         if(this.radius > 0) {
             return 2 * this.radius;
         }
         return 0;
     }
+
+    /**
+     * Calcula el area de un ciruclo de un radio definido por radius
+     * @return double A = Area del circulo
+     */
     @Override
     public double getArea() {
         double A=0;
@@ -33,6 +49,11 @@ public class Circle extends Shape {
         }
         return A;
     }
+
+    /**
+     * Calcula el perimetro de un ciruclo de un radio definido por radius
+     * @return double P = perimetro del circulo
+     */
     @Override
     public double getPerimeter() {
 
@@ -43,6 +64,13 @@ public class Circle extends Shape {
         return P;
     }
 
+    /**
+     * Sobreescribe el metodo toString de la clase Shape agregando el radio del circulo
+     *
+     * @return Si el radio existe devuelve las caracteristicas del circulo,
+     * si el radio no existe regresa que el circulo del radio dado no existe
+     *
+     */
     @Override
     public String toString() {
 

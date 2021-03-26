@@ -37,7 +37,7 @@ public class Rectangle extends Shape {
         }
         return Math.sqrt(Math.pow(this.width,2)+Math.pow(this.length,2));
     }
-
+    
     @Override
     public double getArea() {
         double A;
